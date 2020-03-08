@@ -45,9 +45,9 @@ browse-buttons: true # true/false, adds previous/next arrows to item pages
 ##########
 # SUBJECTS PAGE
 #
-subjects-fields: subject;creator # set the field to be featured in the cloud (if left blank, none will be generated)
-subjects-min: 1 # min size for subject cloud, too many terms = slow load time!
-subjects-stopwords: # boxers;boxing;boxer # set of subjects separated by ;, e.g. boxers;boxing
+subjects-fields: subject # set the field to be featured in the cloud (if left blank, none will be generated)
+subjects-min: 2 # min size for subject cloud, too many terms = slow load time!
+subjects-stopwords: psychiana staff  # boxers;boxing;boxer # set of subjects separated by ;, e.g. boxers;boxing
 
 ##########
 # LOCATIONS PAGE
@@ -62,7 +62,7 @@ locations-stopwords: # set of subjects separated by ; that will be removed from 
 # see _data/map-config.csv for field display options
 latitude: 40.6765 #to determine center of map
 longitude: -95.8587 #to determine center of map
-zoom-level: 5 # zoom level for map 
+zoom-level: 4 # zoom level for map 
 map-base: Esri_WorldStreetMap # set default base map, choose from: Esri_WorldStreetMap, Esri_NatGeoWorldMap, Esri_WorldImagery
 map-search: true # true/false, not suggested with large collections
 map-search-fuzziness: 0.35 # fuzzy search range from 1 = anything to 0 = exact match only
@@ -80,9 +80,9 @@ year-nav-increment: 5 # set increments when auto gen nav years
 #
 # add metadata fields for export in data downloads (tip: paste in first row of csv)
 # comma delimited list, reference url is automatic
-metadata-export-fields: "title,creator,date,description,subject,location,latitude,longitude,source,identifier,type,format,language,rights,rightsstatement"
+metadata-export-fields: "objectid,filename,youtubeid,title,format,description,creator,recipient,date,date-is-approximate?,item_information,subject,latitude,longitude,related_publication,publisher-digital,source,findingaid,original-identifier,identifier,rights,rightsstatement,type,language,relation"
 # generate a facets list for given fields, comma delimited
-metadata-facets-fields: "subject,creator,format"
+metadata-facets-fields: "subject,creator,item_information,recipient"
 
 ##########
 # ADVANCED OPTIONS
